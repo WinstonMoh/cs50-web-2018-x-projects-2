@@ -1,0 +1,17 @@
+<script src="{{ url_for('static', filename = 'index.js')}}"></script>
+{% extends "layout.html" %}
+{% block title %}
+    Flack
+{% endblock %}
+
+{% block body %}
+    <h1>
+      Welcome to  the Messaging app
+    </h1>
+    <form id="username">
+      Username: <input id="name" autocomplete="off" type="text" autofocus placeholder="username">
+      <input id="submit" type="submit">
+    </form>
+    <div id="welcome">
+    </div>
+{% endblock %}
