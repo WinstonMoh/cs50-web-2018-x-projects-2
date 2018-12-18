@@ -22,12 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelector('#username').onsubmit = () => {
 
       // Show welcome text
-      if (!localStorage.getItem('username'))
-        span.innerHTML = 'Welcome cc' + document.querySelector('#name').value;
-        localStorage.setItem('username', document.querySelector('#name').value);
+      username = document.querySelector('#name').value;
+      span.innerHTML = 'Welcome ' + username;
+      localStorage.setItem('username', username);
 
       // Add text to div tag
       document.querySelector('#welcome').append(span);
+
+      // alert user of new login.
+      alert('Logged in as ' + username);
 
       // Clear input field and disable button again
       document.querySelector('#name').value = '';
